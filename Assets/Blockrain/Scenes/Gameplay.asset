@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.48
+    value: 1.73
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -66,7 +66,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   externalLut:
     overrideState: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 18.3
   tint:
     overrideState: 0
     value: 0
@@ -113,17 +113,17 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 16.29
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.87
+    value: 0.91
   contrast:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 19.77
   mixerRedOutRedIn:
     overrideState: 0
     value: 100
@@ -1377,6 +1377,35 @@ MonoBehaviour:
   - {fileID: 6557611690944058034}
   - {fileID: 8359912716344078565}
   - {fileID: -133018047410302863}
+  - {fileID: 4222233295943222291}
+--- !u!114 &4222233295943222291
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 2.92
+  aperture:
+    overrideState: 1
+    value: 5.65
+  focalLength:
+    overrideState: 1
+    value: 47.93
+  kernelSize:
+    overrideState: 0
+    value: 1
 --- !u!114 &6557611690944058034
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1395,7 +1424,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.53
+    value: 7.6
   threshold:
     overrideState: 0
     value: 1
@@ -1451,7 +1480,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.39
+    value: 0.42
   smoothness:
     overrideState: 0
     value: 0.2
