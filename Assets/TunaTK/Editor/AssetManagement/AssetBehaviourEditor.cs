@@ -45,7 +45,7 @@ namespace TunaTK.AssetManagement
 				pGuid.UnityPropertyPath
 			};
 
-			drawExtraProperties = EditorHelper.GetPropertyCountExcluding(serializedObject, propertyPathToExcludeForChildClasses) > 0;
+			drawExtraProperties = EditorHelper.GetPropertyCountExcluding(Tree, propertyPathToExcludeForChildClasses) > 0;
 
 			OnInit();
 		}

@@ -5,6 +5,8 @@
 // Creation Time: 17/04/2019 06:51 PM
 // Created On: CHRONOS
 
+using Sirenix.OdinInspector.Editor;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,20 +24,17 @@ namespace TunaTK
 	{
 		public static Texture GetModuleLogo(string _moduleName) => Resources.Load<Texture>(_moduleName != "Core" ? $"TunaTK/{_moduleName}/Logo" : "TunaTK/Logo");
 
-		public static int GetPropertyCountExcluding(SerializedObject _serializedObject, params string[] _propertyToExclude)
+		public static int GetPropertyCountExcluding(PropertyTree _tree, params string[] _propertyToExclude)
 		{
 			// Loop through properties and create one field (including children) for each top level property.
-			SerializedProperty property = _serializedObject.GetIterator();
-			bool expanded = true;
+			InspectorProperty property = _tree.GetRootProperty(0);
 			int count = 0;
-			while(property.NextVisible(expanded))
+			while(property != null)
 			{
-				expanded = false;
-
-				if(_propertyToExclude.Contains(property.name))
-					continue;
-
-				count++;
+				if(!_propertyToExclude.Contains(property.Name))
+					count++;
+				
+				property = property.NextProperty(false);
 			}
 
 			return count;
