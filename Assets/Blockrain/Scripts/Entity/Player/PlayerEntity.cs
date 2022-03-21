@@ -3,10 +3,10 @@ using TunaTK.Augments;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Blockrain.Character
+namespace Blockrain.Entity.Player
 {
 	[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
-	public class Player : User<Player>
+	public class PlayerEntity : User<PlayerEntity>
 	{
 		public Rigidbody Body { get; private set; }
 		public CapsuleCollider Collider { get; private set; }

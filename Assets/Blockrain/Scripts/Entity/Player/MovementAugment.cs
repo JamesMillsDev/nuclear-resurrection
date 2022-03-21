@@ -6,9 +6,9 @@ using TunaTK.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Blockrain.Character
+namespace Blockrain.Entity.Player
 {
-    public class MovementAugment : EventAugment<Player>
+    public class MovementAugment : EventAugment<PlayerEntity>
     {
         public bool IsGrounded { get; private set; }
         public Rigidbody Body { get; private set; }
@@ -61,7 +61,7 @@ namespace Blockrain.Character
         private bool isCrouchPressed;
         private bool cameraEnabled;
 
-        protected override Task OnInitialisation(Player _user, object[] _params)
+        protected override Task OnInitialisation(PlayerEntity _user, object[] _params)
         {
             Body = user.Body;
             collider = user.Collider;

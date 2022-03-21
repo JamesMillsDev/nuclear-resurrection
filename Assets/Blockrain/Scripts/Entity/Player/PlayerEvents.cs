@@ -1,6 +1,6 @@
 ﻿using TunaTK.Events;
 
-namespace Blockrain.Character
+namespace Blockrain.Entity.Player
 {
 	public class CameraStateChangeEvent : BaseEvent
 	{

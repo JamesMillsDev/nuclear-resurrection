@@ -6,9 +6,9 @@ using TunaTK.Events;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Blockrain.Character
+namespace Blockrain.Entity.Player
 {
-	public class CameraAugment : Augment<Player>
+	public class CameraAugment : Augment<PlayerEntity>
 	{
 		public bool Enabled => Cursor.lockState == CursorLockMode.Locked;
 
@@ -43,7 +43,7 @@ namespace Blockrain.Character
 			Cursor.visible = true;
 		}
 		
-		protected override Task OnInitialisation(Player _user, object[] _params)
+		protected override Task OnInitialisation(PlayerEntity _user, object[] _params)
 		{
 			player = _user.transform;
 			

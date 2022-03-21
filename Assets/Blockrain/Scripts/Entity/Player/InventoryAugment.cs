@@ -6,16 +6,16 @@ using TunaTK.Augments;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Blockrain.Character
+namespace Blockrain.Entity.Player
 {
-	public class InventoryAugment : Augment<Player>
+	public class InventoryAugment : Augment<PlayerEntity>
 	{
 		[SerializeField] private InputActionReference openInventoryAction;
 		[SerializeField] private InputActionReference closeAction;
 
 		private CameraAugment cameraAugment;
 
-		protected override Task OnInitialisation(Player _user, object[] _params)
+		protected override Task OnInitialisation(PlayerEntity _user, object[] _params)
 		{
 			if(!_user.TryGetAugment(out cameraAugment))
 			{
