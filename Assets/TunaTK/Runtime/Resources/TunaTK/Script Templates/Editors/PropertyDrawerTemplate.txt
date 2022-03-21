@@ -1,0 +1,26 @@
+#HEADER#
+
+using UnityEngine;
+using UnityEditor;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	[CustomPropertyDrawer(typeof(#SCRIPTNAME_NODRAWER#))]
+	public class #SCRIPTNAME# : PropertyDrawer 
+	{
+		// Use this for initialization
+		private void OnEnable () 
+		{
+			#NOTRIM#
+		}
+		
+		// Draw the custom property
+		public override void OnGUI(Rect _position, SerializedProperty _property, GUIContent _label)
+        {
+			base.OnGUI(aPosition, aProperty, aLabel);
+		}
+	}
+}

@@ -1,0 +1,26 @@
+#HEADER#
+
+using UnityEngine;
+using UnityEditor;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	[CustomEditor(typeof(#SCRIPTNAME_NOEDITOR#))]
+	public class #SCRIPTNAME# : UnityEditor.Editor 
+	{
+		// Use this for initialization
+		private void OnEnable () 
+		{
+			#NOTRIM#
+		}
+		
+		// Draw the custom inspector
+		public override void OnInspectorGUI () 
+		{
+			base.OnInspectorGUI();
+		}
+	}
+}

@@ -1,0 +1,26 @@
+#HEADER#
+
+using Sirenix.OdinInspector;
+
+using UnityEngine;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : SerializedMonoBehaviour 
+	{
+		// Use this for initialization
+		private void Start () 
+		{
+			#NOTRIM#
+		}
+		
+		// Update is called once per frame
+		private void Update () 
+		{
+			#NOTRIM#
+		}
+	}
+}

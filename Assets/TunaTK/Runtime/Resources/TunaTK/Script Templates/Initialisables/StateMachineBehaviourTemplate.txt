@@ -1,0 +1,35 @@
+#HEADER#
+
+using TunaTK;
+
+using UnityEngine;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : InitialisableStateMachineBehaviour 
+	{
+		// Use this for initialisation
+		protected override void OnInitialisation(Animator _animator, params object[] _params)
+		{
+			#NOTRIM#
+		}
+
+		// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+		public override void OnStateUpdate(Animator _animator, AnimatorStateInfo _stateInfo, int _layerIndex)
+		{
+			#NOTRIM#
+		}
+
+		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+		public override void OnStateExit(Animator _animator, AnimatorStateInfo _stateInfo, int _layerIndex)
+		{
+			#NOTRIM#
+		}
+
+		// OnStateMove is called right after Animator.OnAnimatorMove()
+		public override void OnStateMove(Animator _animator, AnimatorStateInfo _stateInfo, int _layerIndex)
+		{
+			#NOTRIM#
+		}
+	}
+}

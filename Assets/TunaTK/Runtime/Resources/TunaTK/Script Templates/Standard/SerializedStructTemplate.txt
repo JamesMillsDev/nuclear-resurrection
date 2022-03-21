@@ -1,0 +1,16 @@
+#HEADER#
+
+using UnityEngine;
+
+using System.Collections;
+using System.Collections.Generic;
+using Serializable = System.SerializableAttribute;
+
+namespace #NAMESPACE#
+{
+	[Serializable]
+	public struct #SCRIPTNAME# 
+    {
+        #NOTRIM#
+    }
+}

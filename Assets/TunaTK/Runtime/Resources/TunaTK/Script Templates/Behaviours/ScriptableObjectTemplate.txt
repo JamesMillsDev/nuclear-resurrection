@@ -1,0 +1,17 @@
+#HEADER#
+
+using TunaTK;
+
+using UnityEngine;
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : ScriptableObject
+	{
+		#NOTRIM#
+	}
+}

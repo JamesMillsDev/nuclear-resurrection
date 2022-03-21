@@ -1,0 +1,33 @@
+#HEADER#
+
+using UnityEngine;
+using UnityEditor;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : EditorWindow 
+	{
+		// Opens the window
+		[MenuItem("Window/#SCRIPTNAME_NOEDITOR#")]
+        public static void Init()
+        {
+            EditorWindow window = EditorWindow.GetWindow(typeof(#SCRIPTNAME#));
+            window.titleContent = new GUIContent("#SCRIPTNAME_NOEDITOR#");
+        }
+
+		// Use this for initialization
+		private void OnEnable () 
+		{
+			#NOTRIM#
+		}
+		
+		// Draw the custom editor window
+		private void OnGUI()
+		{
+			#NOTRIM#
+		}
+	}
+}

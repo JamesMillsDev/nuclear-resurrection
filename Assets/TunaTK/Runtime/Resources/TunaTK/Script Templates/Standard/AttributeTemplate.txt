@@ -1,0 +1,17 @@
+#HEADER#
+
+using UnityEngine;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : PropertyAttribute 
+	{
+		public #SCRIPTNAME#()
+		{
+			#NOTRIM#
+		}
+	}
+}

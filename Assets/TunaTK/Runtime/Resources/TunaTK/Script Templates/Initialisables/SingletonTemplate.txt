@@ -1,0 +1,26 @@
+#HEADER#
+
+using TunaTK;
+
+using UnityEngine;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : InitialisableSingleton<#SCRIPTNAME#> 
+	{
+		// Use this for initialization
+		protected override void OnInitialisation(params object[] _params)
+		{
+			#NOTRIM#
+		}
+
+		// Called once per frame once initialised
+		protected override void InitialisedUpdate()
+		{
+			#NOTRIM#
+		}
+	}
+}

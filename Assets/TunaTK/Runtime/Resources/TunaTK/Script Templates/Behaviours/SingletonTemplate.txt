@@ -1,0 +1,26 @@
+#HEADER#
+
+using TunaTK;
+
+using UnityEngine;
+
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : MonoSingleton<#SCRIPTNAME#> 
+	{
+		// Use this for initialization
+		private void Start () 
+		{
+			#NOTRIM#
+		}
+		
+		// Update is called once per frame
+		private void Update () 
+		{
+			#NOTRIM#
+		}
+	}
+}

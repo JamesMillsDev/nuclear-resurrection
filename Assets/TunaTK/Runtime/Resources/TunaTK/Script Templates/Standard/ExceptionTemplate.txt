@@ -1,0 +1,18 @@
+#HEADER#
+
+using UnityEngine;
+
+using Exception = System.Exception;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace #NAMESPACE#
+{
+	public class #SCRIPTNAME# : Exception 
+	{
+		public #SCRIPTNAME#()
+		{
+			#NOTRIM#
+		}
+	}
+}

@@ -1,0 +1,9 @@
+#HEADER#
+
+namespace #NAMESPACE#
+{
+	public enum #SCRIPTNAME# 
+	{
+		
+	}
+}
