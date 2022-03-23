@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Blockrain/Scenes/Menus.unity
+    path: Assets/NuclearResurrection/Scenes/Menus.unity
     guid: 96c88ccafa9d45a43a4153835c07fdd7
   m_configObjects: {}

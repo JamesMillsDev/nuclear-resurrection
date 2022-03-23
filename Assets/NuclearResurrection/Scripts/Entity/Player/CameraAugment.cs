@@ -35,12 +35,14 @@ namespace NuclearResurrection.Entity.Player
 		{
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
+			EventBus.Raise(new CameraStateChangeEvent(true));
 		}
 
 		public void Disable()
 		{
 			Cursor.lockState = CursorLockMode.None;
 			Cursor.visible = true;
+			EventBus.Raise(new CameraStateChangeEvent(false));
 		}
 		
 		protected override Task OnInitialisation(PlayerEntity _user, object[] _params)
