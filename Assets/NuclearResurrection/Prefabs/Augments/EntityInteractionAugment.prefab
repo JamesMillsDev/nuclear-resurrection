@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2500780438679611550}
   - component: {fileID: 2357764996379039562}
   - component: {fileID: 3982298160401126397}
+  - component: {fileID: 7094262120977541314}
   m_Layer: 0
   m_Name: EntityInteractionAugment
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   guid: bb492917-d1f2-4df1-b068-530597eb55ef
   autoInitialise: 0
   initialisationMethod: 0
+  turnController: {fileID: 7094262120977541314}
   interactButton: {fileID: -3063252763176601664, guid: 4489cc904bae0514ab042e804b5a85f8, type: 3}
 --- !u!135 &3982298160401126397
 SphereCollider:
@@ -70,3 +72,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 1, z: 1}
+--- !u!114 &7094262120977541314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3153920369621205265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea00ad25c692c9d4881f3c19e75ca56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  turnSpeed: 1500
+  ignoreControllerMomentum: 0

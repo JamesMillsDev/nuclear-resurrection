@@ -1,3 +1,7 @@
+using CMF;
+
+using NuclearResurrection.Compatibility.CMF;
+
 using TunaTK.Augments;
 
 using UnityEngine;
@@ -5,11 +9,12 @@ using UnityEngine.InputSystem;
 
 namespace NuclearResurrection.Entity.Player
 {
-	[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 	public class PlayerEntity : User<PlayerEntity>
 	{
-		public Rigidbody Body { get; private set; }
+		public PlayerController PlayerController { get; private set; }
 		public CapsuleCollider Collider { get; private set; }
+		public Rigidbody Rigidbody { get; private set; }
+		
 		public PlayerInput Input => input;
 
 		[SerializeField] private PlayerInput input;
@@ -17,9 +22,10 @@ namespace NuclearResurrection.Entity.Player
 		// Start is called before the first frame update
 		protected override void Start()
 		{
-			Body = gameObject.GetComponent<Rigidbody>();
+			PlayerController = gameObject.GetComponent<PlayerController>();
 			Collider = gameObject.GetComponent<CapsuleCollider>();
-
+			Rigidbody = gameObject.GetComponent<Rigidbody>();
+			
 			base.Start();
 		}
 	}

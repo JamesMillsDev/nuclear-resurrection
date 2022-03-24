@@ -11,6 +11,8 @@ using TunaTK.Augments;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+using NuclearResurrection.Compatibility.CMF;
+
 namespace NuclearResurrection.Inventories
 {
 	public class InventoryAugment : Augment<PlayerEntity>
@@ -30,13 +32,13 @@ namespace NuclearResurrection.Inventories
 		[SerializeField, TabGroup("InventoryAugment", "Inventory")]
 		private GameObject inventoryHolder;
 
-		private CameraAugment cameraAugment;
+		private CmfAugment cmfAugment;
 
 		private readonly List<InventorySlot> slots = new List<InventorySlot>();
 
 		protected override Task OnInitialisation(PlayerEntity _user, object[] _params)
 		{
-			if(!_user.TryGetAugment(out cameraAugment))
+			if(!_user.TryGetAugment(out cmfAugment))
 			{
 				Debug.LogException(new MissingReferenceException("Missing Camera Augment"));
 				return Task.FromCanceled(CancellationToken.None);
@@ -65,7 +67,7 @@ namespace NuclearResurrection.Inventories
 
 		private void OnOpenInventoryPerformed(InputAction.CallbackContext _context)
 		{
-			cameraAugment.Disable();
+			cmfAugment.Disable();
 
 			for(int i = 0; i < slots.Count; i++)
 			{
@@ -79,7 +81,7 @@ namespace NuclearResurrection.Inventories
 
 		private void OnCloseInventoryPerformed(InputAction.CallbackContext _context)
 		{
-			cameraAugment.Enable();
+			cmfAugment.Enable();
 			inventoryHolder.SetActive(false);
 		}
 	}

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using CMF;
+
+using System.Threading.Tasks;
 
 using TunaTK.Augments;
 
@@ -9,6 +11,7 @@ namespace NuclearResurrection.Entity.Player
 {
 	public class EntityInteractionAugment : Augment<PlayerEntity>
 	{
+		[SerializeField] private TurnTowardControllerVelocity turnController;
 		[SerializeField] private InputActionReference interactButton;
 		private Entity closeEntity;
 
@@ -20,6 +23,8 @@ namespace NuclearResurrection.Entity.Player
 				if(closeEntity != null)
 					closeEntity.PlayerInteract(user);
 			};
+
+			turnController.controller = _user.PlayerController;
 			
 			return base.OnInitialisation(_user, _params);
 		}
